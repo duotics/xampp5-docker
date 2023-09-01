@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  my_xampp5:
+    build: .
+    container_name: myXampp5
+    ports:
+      - "41051:22"
+      - "41052:80"
+      - "41053:443"
+      - "41054:3306"
+    volumes:
+      - "./www:/www"
+      - "./data:/opt/lampp/var/mysql"
+
+volumes:
+  myXampp5db:
