@@ -4,7 +4,6 @@ FROM tomsik68/xampp:5
 # Metadatos y Variables de entorno
 LABEL maintainer="dbanegasl@gmail.com"
 
-
 # Crear directorios y Actualizar e Instalar Dependencias
 RUN apt-get update -y && \
     apt-get install -y wget php-cli php-zip unzip php-mbstring libfreetype6-dev libjpeg62-turbo-dev libpng-dev libpq-dev && \

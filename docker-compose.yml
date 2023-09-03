@@ -10,11 +10,15 @@ services:
       - "${PORT_HTTPS}:443"
       - "${PORT_MYSQL}:3306"
     volumes:
+      - "./config:/opt/lampp/apache2/conf.d"
       - "./www:/www"
-      - "./data:/opt/lampp/var/mysql"
+      - "mX5_db:/opt/lampp/var/mysql"
+      #- "./data:/opt/lampp/var/mysql"
     networks:
-      - myxampp5
+      - mX5_net
     restart: always
 
+volumes:
+  mX5_db:
 networks:
-  myxampp5:
+  mX5_net:
